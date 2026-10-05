@@ -1,0 +1,22 @@
+[project]
+name = "genesis-wxai-lift-cube"
+version = "0.1.0"
+description = "Pick-and-place with the Trossen WidowX AI arm in the Genesis simulator: a state-based RL teacher and an image-based student policy."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "Apache-2.0"
+dependencies = [
+    "genesis-world==1.4.3",
+    "rsl-rl-lib>=5.0.0",
+    "tensorboard",
+    "tensordict",
+    "torch",
+    "torchvision",
+    "trossen-arm-mujoco",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+trossen-arm-mujoco = { git = "https://github.com/TrossenRobotics/trossen_arm_mujoco", rev = "77aba5d" }
